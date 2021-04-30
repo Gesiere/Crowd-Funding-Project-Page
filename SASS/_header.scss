@@ -1,0 +1,62 @@
+.header{
+    position: relative;
+     background-image: url(/images/image-hero-mobile.jpg);
+     background-repeat: no-repeat;
+    background-position: center 10%;
+    background-size: cover;
+    padding: 1.5rem 2rem 12rem;
+    @include xlarge{
+        background-image: url(/images/image-hero-desktop.jpg);
+        background-position:center center;
+        background-size: 100% 100%;
+        padding: 4rem 2rem 20rem;
+        
+}
+    @include tablet{
+        background-size: 100%;
+        background-position: center center;
+        padding-bottom: 20rem;
+    }
+
+
+
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .nav-links{
+            a{
+                margin-left: 2rem;
+                color:#fff ;
+                opacity: 0.9;
+                transition: opacity 300ms ease-in-out;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    
+    }
+
+
+    .mobile-menu{
+        position: absolute;
+        background: #fff;
+        top: 5rem;
+        left: 2rem;
+        right: 2rem;
+        animation: slide-in 300ms forwards;
+        z-index: 1;
+        .mobile-links{
+            a{
+                display: block;
+                color: $black;
+                padding: 2rem;
+            }
+        }
+    }
+
+    
+
+}

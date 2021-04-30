@@ -1,0 +1,210 @@
+.modal{
+    // position: fixed;
+    background-color: #fff;
+    position: absolute;
+    max-width: 50%;
+    top: 30%;
+    left: 25%;
+    min-height: 100vh;
+    margin: 0 auto;
+    transform: scale(0);
+    // display: none;
+    transition: transform 300ms ease-in-out;
+    z-index: 2;
+    &.active{
+        transform: scale(1);
+    }
+    @include mobile{
+        right: 0;
+        left: 0;
+        max-width: 90%;
+    }
+    @include tablet{
+        max-width: 65%;
+        left: 18%;
+    }
+    input[type="radio"]{
+        border: 2px solid red;
+        width: 35px;
+        height: 20px;
+        padding: 5px;
+        background-color: red;
+    }
+    h3{
+        transition: color 300ms ease-in-out;
+        font-size: 1rem;
+        &:hover{
+            color: $Moderate-cyan;
+        }
+        @include mobile{
+            margin-left: 0.5rem;
+        }
+    }
+    svg {
+        position: relative;
+        top: -30px;
+        transition: opacity 300ms ease-in-out;
+         path{
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    hr{
+        margin-top: 2rem;
+        display: none;
+        &.select{
+            display: block;
+        }
+        @include mobile{
+            margin-top: 4rem;
+        }
+    }
+  
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .svg path{
+            position: relative;
+            top: -30px;
+        }
+        
+    }
+    .modal-items{
+        padding: 2rem 1rem;
+        margin-bottom: 1.5rem;
+        border: 2px solid rgba($dark-gray, 0.2);
+        position: relative;
+        &.select{
+            border: 2px solid $Moderate-cyan;
+        }
+        .modal-top{
+            display: flex;
+            justify-content: space-between;
+                .odd{
+        @include xlarge{
+            display: flex;
+        }
+
+        h4{
+            color:$Moderate-cyan ;
+            margin-left: 1rem;
+            font-size: 0.875rem;
+            @include mobile{
+                margin-left: 0.5rem;
+                font-size: 1rem;
+            }
+            @include tablet{
+                margin-left: 0;
+            }
+        }
+     
+    }
+    .num{
+        margin-bottom: 0.5rem;
+        }
+
+
+  
+         }
+        }
+        .modal-item{
+            padding: 0 1rem;
+        p{
+            
+            margin:0;
+            font-size:  0.9375rem;
+            @include mobile{
+                font-size: 0.875rem;
+            }
+        
+       }
+            @include mobile{
+                padding: 0;
+            }
+            .modal-titles{
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+            }
+        }
+       .pledge-container{
+           display: none;
+           &.select{
+               display: block;
+           }
+            .pledge{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include mobile{
+                flex-direction: column;
+            }
+         .pledge-input{
+            display: flex;
+            justify-content: center;
+        input{
+        width: 30%;
+        margin-right: 0.5rem;
+        border-radius: 50px;
+        border: 2px solid rgba($dark-gray, 0.3);
+        transition: border 300ms ease-in;
+        &:hover{
+            border: 2px solid $Moderate-cyan;
+        }
+        &::placeholder{
+            font-weight: 800;
+            text-align: center;
+        }
+        &.select{
+            border: 2px solid red;
+        }
+        @include mobile{
+            width: 50%;
+        }
+        }
+        
+    
+    }
+        }
+       }
+}
+
+
+
+.completed{
+    position: absolute;
+    background: #fff;
+    text-align: center;
+    padding: 2rem;
+    top: 0;
+    max-width: 35%;
+    left: 0;
+    right: 0;
+    top: 32rem;
+    margin: 0 auto;
+    transform: scale(0);
+    transition: transform 300ms ease-in-out;
+    z-index: 2;
+    p{
+        font-size: 0.9375rem;
+        @include mobile{
+            font-size: 0.875rem;
+        }
+    }
+    @include mobile{
+        max-width: 90%;
+        top: 11rem;
+    }
+    @include tablet{
+        max-width: 40%;
+    }
+    &.active{
+        transform: scale(1);
+    }
+
+}
+
+
+
